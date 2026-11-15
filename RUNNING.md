@@ -22,9 +22,30 @@ Inventario y compilaciones locales del 2026-11-15. Una compilación correcta no 
 
 | Componente | Tipo / destino | Validación |
 | --- | --- | --- |
-| [build.xml](<build.xml>) | netbeans-ant / 24 | Bloqueado: métodos, clases o dependencias faltantes |
+| [build.xml](<build.xml>) | netbeans-ant / 24 | Compila; comprobado el 2026-11-15; ver alcance actualizado abajo |
 
 ## Archivos ignorados
 
 `.gitignore` excluye credenciales locales, estado del editor y salidas de las herramientas detectadas. No deja de versionar archivos que ya estaban en Git. Los manifiestos, archivos de bloqueo, recursos fuente y scripts de esquema forman parte del código.
 <!-- local-development:end -->
+
+<!-- build-repairs-20261115:start -->
+## Reparación y comprobación — 2026-11-15
+
+- Se alineó el nombre de la clase principal con main.java y se añadió la excepción de stock insuficiente utilizada por OrdenService.
+
+Comprobado:
+
+- Compila con Ant/JDK 24.
+
+Comandos:
+
+```powershell
+.\build-local.ps1
+```
+
+Alcance pendiente:
+
+- La prueba de los flujos completos de órdenes, cifrado y archivos del ejercicio continúa siendo parcial.
+
+<!-- build-repairs-20261115:end -->
